@@ -4,7 +4,7 @@ const { Comment } = require('../../models');
 // GET comments
 router.get('/', (req, res) => {
 Comment.findAll()
-.then(dbCommentData => res.join(dbCommentData))
+.then(dbCommentData => res.json(dbCommentData))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -12,12 +12,12 @@ Comment.findAll()
 }),
 
 // POST comments
-router.get('/', (req, res) => {
+router.post('/', (req, res) => {
     Comment.create({
         comment_text: req.body.comment_text,
         post_id: req.body.post_id,
         // use the id from the session
-        user_id: req.session.user_id
+        user_id: req.body.user_id
       })
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {
