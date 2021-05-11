@@ -42,7 +42,7 @@ async function loginFormHandler(event) {
   
       if (response.ok) {
           console.log('you are logged in!')
-        document.location.replace('/');
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
       }
