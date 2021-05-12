@@ -4,28 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tech Blog</title>
+  <title id="main-title">Tech Blog</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="hero">
+    <header class="dashboard">
+      <h1 class="logo"><i class="fab "></i>The Tech Blog</h1>
       <div>
         <nav class"nav">
           <a class="link" href="/">Home</a>
           <a class="link" href="/dashboard">Dashboard</a>
        
             {{#if loggedIn}}
-            <a id="logout" class="link" href="/">logout</a>
+            <a id="logout" class="link" href="/">Logout</a>
             {{else}}
-            <a class="link" href="/login">login</a>
+            <a class="link" href="/login">Login</a>
             {{/if}}
           
         </nav>
       </div>
 
-      <h1 class="app-title"><i class="fab "></i>The Tech Blog</h1>
+      
     </header>
 
     <main>
