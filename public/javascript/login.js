@@ -10,7 +10,6 @@ async function signupFormHandler(event) {
             method: 'post',
             body: JSON.stringify({
                 username,
-                email,
                 password
             }),
             headers: { 'Content Type': 'application/json' }
