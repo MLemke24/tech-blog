@@ -55,7 +55,10 @@ router.post('/', (req, res) => {
         password: req.body.password
       })
       .then(dbUserData => {
-        if(!req.session){res.json('not working')} 
+        if (!dbUserData) {
+          res.status(400).json({ message: 'No user with that username!' });
+          return;
+        }
         req.session.save(() => {
           req.session.user_id = dbUserData.id;
           req.session.username = dbUserData.username;
