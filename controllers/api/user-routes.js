@@ -50,13 +50,12 @@ router.get('/:id', (req,res) => {
 
 // POST api/users
 router.post('/', (req, res) => {
-    console.log(req.body);
     User.create({
         username: req.body.username,
         password: req.body.password
       })
       .then(dbUserData => {
-        console.log("create user route", dbUserData.username, dbUserData.password);
+        if(!req.session){res.json('not working')} 
         req.session.save(() => {
           req.session.user_id = dbUserData.id;
           req.session.username = dbUserData.username;
