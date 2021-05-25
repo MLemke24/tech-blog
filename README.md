@@ -4,25 +4,25 @@
 This repository contains a blog style application called "tech blog".
 
 ## Tech Blog
-![Image of Game Start Page](https://github.com/MLemke24/Nerd-Words/blob/main/assets/Screen%20Shot%202021-05-25%20at%2010.41.36%20AM.png)
+![Image of Homepage Page](https://github.com/MLemke24/tech-blog/blob/main/public/assets/images/Screen%20Shot%202021-05-25%20at%2011.05.08%20AM.png)
 
 
 ## Languages and Tools Used
-* HTML 
+* Handlebars
 * CSS
-* Bulma
+* MySql
 * JavaScript
+* Express.js
+* Bcrypt
+* Sequelize
 
 ## About This Project
-* When you click start a 3 second timer will begin
-* At the end of that timer, a word will pop up for 1 second. 
-* You must then use the input box to spell the word correclty. 
-* If you spell it right, you get a point
-* If you spell it wrong, you get a point taken away.
+* This project is a dedicated tech blog
+* Users can sign up, post materials and comment on others posts. 
 
 
 ## Link To Deployed Application 
-[Link To Game](https://mlemke24.github.io/Nerd-Words/)
+[Link To Tech Blog](https://the-tech-blog-lemke.herokuapp.com/)
 
 ## Who
 Matt Lemke
